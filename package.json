@@ -4,9 +4,8 @@
   "description": "A minimal portfolio with Vanilla JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production",
-    "dev": "webpack --mode development"
+    "build": "rimraf dist && webpack --mode production",
+    "dev": "rimraf dist && webpack --mode development"
   },
   "repository": {
     "type": "git",
@@ -34,11 +33,15 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.5.3",
-    "stylus": "^0.56.0",
+    "stylus": "^0.57.0",
     "stylus-loader": "^6.2.0",
     "terser-webpack-plugin": "^5.3.1",
     "url-loader": "^4.1.1",
     "webpack": "^5.69.1",
-    "webpack-cli": "^4.9.2"
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.2"
   }
 }
