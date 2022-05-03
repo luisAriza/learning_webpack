@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "rimraf dist && webpack --config webpack.config.js",
-    "build-dev": "rimraf dist && webpack --config webpack.config.dev.js"
+    "build:dev": "rimraf dist && webpack --config webpack.config.dev.js"
   },
   "repository": {
     "type": "git",
@@ -43,7 +43,6 @@
     "webpack-dev-server": "^4.8.1"
   },
   "dependencies": {
-    "-": "^0.0.1",
     "rimraf": "^3.0.2"
   }
 }
