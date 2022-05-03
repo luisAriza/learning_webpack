@@ -11,11 +11,19 @@ module.exports = {
     filename: "[name].[contenthash].js",
     assetModuleFilename: "assets/images/[hash][ext][query]",
   },
-  mode: "development",
-  watch: true,
-  watchOptions: {
-    ignored: /node_modules/,
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "dist/"),
+    },
+    compress: true,
+    historyApiFallback: true,
+    port: 8070,
   },
+  mode: "development",
+  // watch: true,
+  // watchOptions: {
+  //   ignored: /node_modules/,
+  // },
   resolve: {
     extensions: [".js"],
     alias: {
@@ -53,7 +61,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      inject: true,
+      inject: "body",
       template: "./public/index.html",
       filename: "./index.html",
     }),
